@@ -1,26 +1,31 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <app-header/>
+  <q-layout view="hHh Lpr lff">
+    <app-header @drawerToggle="drawer = !drawer"/>
+
+    <app-drawer :drawer="drawer" @close="drawer = false"/>
 
     <q-page-container>
-      <router-view />
+        <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import AppHeader from 'components/AppHeader'
+import AppHeader from 'components/AppHeader';
+import AppDrawer from 'components/AppDrawer';
 
 export default {
   name: 'MainLayout',
 
   components: {
-    AppHeader
+      AppHeader,
+      AppDrawer
   },
 
   data () {
     return {
-      test: 'foo'
+        drawer: true,
+        miniState: false
     }
   }
 }

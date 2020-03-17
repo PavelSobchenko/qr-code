@@ -1,9 +1,13 @@
 import {CONVERT_MODULE} from 'src/js/constants';
 
 export default {
-    header: {
-        langTitle: 'Язык',
+    appName: 'QR-code generator',
+    drawer: {
         locale: 'Ru'
+    },
+    navigation: {
+        index: 'Главная',
+        history: 'История'
     },
     tabs: {
         labels: {

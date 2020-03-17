@@ -2,9 +2,10 @@
 const routes = [
     {
         path: '/',
+        redirect: {name: 'index'}, // fix for correct active navigation item
         component: () => import('layouts/MainLayout.vue'),
         children: [
-            { path: '', name: 'index', component: () => import('pages/Index.vue') },
+            { path: 'index', name: 'index', component: () => import('pages/Index.vue') },
             { path: 'history', name: 'history', component: () => import('pages/History') }
         ]
     },
